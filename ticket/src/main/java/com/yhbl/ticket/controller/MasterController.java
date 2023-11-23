@@ -21,6 +21,9 @@ public class MasterController {
     @GetMapping({"/getTicket"})
     public Object ticket(Integer lts, Integer tbts) {
         Map<Object, Object> multiple = Ticket.multiple(lts, tbts);
+        if (multiple==null){
+            return "null";
+        }
         return multiple;
     }
 }
