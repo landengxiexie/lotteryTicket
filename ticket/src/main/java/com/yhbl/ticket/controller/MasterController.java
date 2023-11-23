@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MasterController {
 
     @GetMapping({"/getTicket"})
-    public Object ticket(Integer lts, Integer tbts) {
-        Map<Object, Object> multiple = Ticket.multiple(lts, tbts);
+    public Object ticket() {
+        Map<Object, Object> multiple = Ticket.multiple();
         if (multiple==null){
             return "null";
         }
