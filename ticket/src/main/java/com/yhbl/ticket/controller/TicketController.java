@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping({"/api/v1/pub/ticket"})
-public class MasterController {
+public class TicketController {
 
     @GetMapping({"/getTicket"})
     public Object ticket(Integer lts, Integer tbts) {
