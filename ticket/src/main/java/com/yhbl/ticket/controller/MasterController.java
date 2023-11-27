@@ -20,6 +20,9 @@ public class MasterController {
 
     @GetMapping({"/getTicket"})
     public Object ticket(Integer lts, Integer tbts) {
+	if(lts>1000||tbts>1000){
+		return "输入注数应≤1000";
+	}
         Map<Object, Object> multiple = Ticket.multiple(lts, tbts);
         if (multiple==null){
             return "null";
